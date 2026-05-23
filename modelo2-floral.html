@@ -119,6 +119,24 @@
 
     .fi{opacity:0;transform:translateY(25px);transition:all .7s ease}
     .fi.v{opacity:1;transform:none}
+
+    /* MOBILE RESPONSIVE */
+    html,body{overflow-x:hidden}
+    .ham{display:none;flex-direction:column;gap:5px;cursor:pointer;border:none;background:none;padding:6px}
+    .ham span{display:block;width:22px;height:2px;background:var(--rose-d);border-radius:2px;transition:all .25s}
+    .mnav{display:none;position:fixed;top:55px;left:0;right:0;z-index:998;background:rgba(253,245,247,.98);backdrop-filter:blur(8px);border-bottom:1px solid rgba(212,117,138,.2);flex-direction:column;padding:8px 0}
+    .mnav.on{display:flex}
+    .mnav a{display:block;padding:16px 24px;color:var(--text);text-decoration:none;font-size:.85rem;letter-spacing:1.5px;border-bottom:1px solid rgba(212,117,138,.1);transition:color .2s}
+    .mnav a:last-child{border-bottom:none}
+    .mnav a:active{color:var(--rose)}
+    @media(max-width:700px){.ham{display:flex}}
+    @media(max-width:768px){
+      nav{padding:14px 20px}
+      section{padding:60px 20px}
+      .fg input,.fg select,.fg textarea{font-size:16px!important}
+      .btn-go-presentes{display:block;width:100%;padding:16px 20px;text-align:center;box-sizing:border-box}
+    }
+    @media(max-width:480px){.countdown{gap:10px}.cnt{min-width:68px;padding:12px 14px}.cnt-n{font-size:2.2rem}}
   </style>
 </head>
 <body>
@@ -131,7 +149,14 @@
     <li><a href="#rsvp">Presença</a></li>
     <li><a href="#presentes">Presentes</a></li>
   </ul>
+  <button class="ham" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
+<div class="mnav" id="mnav">
+  <a href="#historia" onclick="document.getElementById('mnav').classList.remove('on')">História</a>
+  <a href="#locais" onclick="document.getElementById('mnav').classList.remove('on')">Cerimônia</a>
+  <a href="#rsvp" onclick="document.getElementById('mnav').classList.remove('on')">Presença</a>
+  <a href="#presentes" onclick="document.getElementById('mnav').classList.remove('on')">Presentes</a>
+</div>
 
 <div class="hero" id="home">
   <div class="hero-text">
@@ -295,6 +320,9 @@
   });
   const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('v')}),{threshold:.1});
   document.querySelectorAll('.fi').forEach(el=>obs.observe(el));
+  const ham=document.getElementById('ham'),mnav=document.getElementById('mnav');
+  ham.addEventListener('click',()=>mnav.classList.toggle('on'));
+  document.addEventListener('click',e=>{if(!ham.contains(e.target)&&!mnav.contains(e.target))mnav.classList.remove('on')});
 </script>
 </body>
 </html>
