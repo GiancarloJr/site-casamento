@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escolha o Modelo — Site de Casamento</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Montserrat',sans-serif;background:#f5f0ea;color:#333}
+    header{background:white;text-align:center;padding:60px 20px 50px;border-bottom:1px solid #eee}
+    header small{display:block;font-size:.7rem;letter-spacing:4px;text-transform:uppercase;color:#C9A96E;margin-bottom:15px}
+    header h1{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:300;color:#2c1810}
+    header p{color:#999;font-size:.85rem;margin-top:10px;font-weight:300}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:28px;max-width:1300px;margin:50px auto;padding:0 30px}
+    .card{background:white;border-radius:10px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.07);transition:transform .3s,box-shadow .3s;text-decoration:none;color:inherit;display:block}
+    .card:hover{transform:translateY(-6px);box-shadow:0 12px 40px rgba(0,0,0,.14)}
+    .preview{height:230px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:white}
+    .preview .num{font-size:.65rem;letter-spacing:4px;text-transform:uppercase;opacity:.7;margin-bottom:10px}
+    .preview .pnames{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;font-style:italic;text-shadow:0 2px 8px rgba(0,0,0,.3)}
+    .preview .pdate{font-size:.7rem;letter-spacing:2px;margin-top:8px;opacity:.75}
+    .body{padding:28px}
+    .tag{font-size:.65rem;text-transform:uppercase;letter-spacing:3px;color:#aaa}
+    .title{font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:#2c1810;margin:7px 0 10px}
+    .desc{font-size:.82rem;color:#666;line-height:1.65}
+    .chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}
+    .chip{padding:4px 12px;border-radius:20px;font-size:.7rem}
+    .btn-ver{display:inline-block;margin-top:20px;padding:11px 28px;border-radius:4px;font-size:.72rem;text-transform:uppercase;letter-spacing:2px;font-weight:500;color:white;transition:opacity .2s}
+    .btn-ver:hover{opacity:.85}
+
+    /* Themes */
+    .t1 .preview{background:linear-gradient(145deg,#c9a96e,#7a5c2e)}
+    .t1 .chip{background:#fdf5e8;color:#8B6914}
+    .t1 .btn-ver{background:#C9A96E}
+
+    .t2 .preview{background:linear-gradient(145deg,#e8aab5,#b5546a)}
+    .t2 .chip{background:#fdf0f3;color:#b5546a}
+    .t2 .btn-ver{background:#D4758A}
+
+    .t3 .preview{background:linear-gradient(145deg,#333,#111)}
+    .t3 .chip{background:#f2f2f2;color:#555}
+    .t3 .btn-ver{background:#111}
+
+    .t4 .preview{background:linear-gradient(145deg,#c4623a,#7a3f20)}
+    .t4 .chip{background:#fdf0e8;color:#C4623A}
+    .t4 .btn-ver{background:#C4623A}
+
+    .t5 .preview{background:linear-gradient(145deg,#0D1B3E,#1a3060)}
+    .t5 .chip{background:#f0f3ff;color:#0D1B3E}
+    .t5 .btn-ver{background:#D4AF37;color:#0D1B3E}
+
+    .features-bar{background:white;text-align:center;padding:28px 20px;border-top:1px solid #eee;margin-top:20px}
+    .features-bar p{font-size:.78rem;color:#888}
+    .features-bar strong{color:#C9A96E}
+    footer{text-align:center;padding:40px;color:#bbb;font-size:.75rem}
+  </style>
+</head>
+<body>
+<header>
+  <small>Site de Casamento</small>
+  <h1>Escolha o Estilo</h1>
+  <p>Clique em cada modelo para ver completo — com mapa, RSVP e lista de presentes</p>
+</header>
+
+<div class="grid">
+  <a href="modelo1-classico.html" class="card t1">
+    <div class="preview">
+      <div class="num">Modelo 01</div>
+      <div class="pnames">Isabela &amp; Rafael</div>
+      <div class="pdate">14 · Fev · 2026</div>
+    </div>
+    <div class="body">
+      <div class="tag">Estilo</div>
+      <div class="title">Elegante Clássico</div>
+      <div class="desc">Sofisticado em dourado e marfim com fontes serifadas. Atemporal e refinado para um casamento tradicional.</div>
+      <div class="chips">
+        <span class="chip">Dourado</span><span class="chip">Marfim</span><span class="chip">Clássico</span>
+      </div>
+      <div class="btn-ver">Ver Modelo →</div>
+    </div>
+  </a>
+
+  <a href="modelo2-floral.html" class="card t2">
+    <div class="preview">
+      <div class="num">Modelo 02</div>
+      <div class="pnames">Isabela &amp; Rafael</div>
+      <div class="pdate">14 · Fev · 2026</div>
+    </div>
+    <div class="body">
+      <div class="tag">Estilo</div>
+      <div class="title">Romântico Floral</div>
+      <div class="desc">Delicado e feminino em tons rosados com fontes cursivas. Cheio de charme e romantismo.</div>
+      <div class="chips">
+        <span class="chip">Rosa</span><span class="chip">Floral</span><span class="chip">Romântico</span>
+      </div>
+      <div class="btn-ver">Ver Modelo →</div>
+    </div>
+  </a>
+
+  <a href="modelo3-moderno.html" class="card t3">
+    <div class="preview">
+      <div class="num">Modelo 03</div>
+      <div class="pnames">Isabela &amp; Rafael</div>
+      <div class="pdate">14 · Fev · 2026</div>
+    </div>
+    <div class="body">
+      <div class="tag">Estilo</div>
+      <div class="title">Moderno Minimalista</div>
+      <div class="desc">Clean e contemporâneo em preto e branco. Design arrojado com tipografia forte e muito espaço.</div>
+      <div class="chips">
+        <span class="chip">Preto & Branco</span><span class="chip">Moderno</span><span class="chip">Bold</span>
+      </div>
+      <div class="btn-ver">Ver Modelo →</div>
+    </div>
+  </a>
+
+  <a href="modelo4-rustico.html" class="card t4">
+    <div class="preview">
+      <div class="num">Modelo 04</div>
+      <div class="pnames">Isabela &amp; Rafael</div>
+      <div class="pdate">14 · Fev · 2026</div>
+    </div>
+    <div class="body">
+      <div class="tag">Estilo</div>
+      <div class="title">Rústico Boho</div>
+      <div class="desc">Aconchegante em tons terrosos e fonte manuscrita. Perfeito para casamentos ao ar livre ou no campo.</div>
+      <div class="chips">
+        <span class="chip">Terracota</span><span class="chip">Boho</span><span class="chip">Natural</span>
+      </div>
+      <div class="btn-ver">Ver Modelo →</div>
+    </div>
+  </a>
+
+  <a href="modelo5-luxo.html" class="card t5">
+    <div class="preview">
+      <div class="num">Modelo 05</div>
+      <div class="pnames">Isabela &amp; Rafael</div>
+      <div class="pdate">14 · Fev · 2026</div>
+    </div>
+    <div class="body">
+      <div class="tag">Estilo</div>
+      <div class="title">Luxo Real</div>
+      <div class="desc">Grandioso em azul marinho e dourado com fontes clássicas. Dramático, imponente e inesquecível.</div>
+      <div class="chips">
+        <span class="chip">Azul Marinho</span><span class="chip">Dourado</span><span class="chip">Luxo</span>
+      </div>
+      <div class="btn-ver">Ver Modelo →</div>
+    </div>
+  </a>
+</div>
+
+<div class="features-bar">
+  <p>Todos os modelos incluem: <strong>Foto do Casal</strong> · <strong>Mapa da Igreja</strong> · <strong>Mapa da Festa</strong> · <strong>Confirmação de Presença</strong> · <strong>Lista de Presentes</strong> · <strong>Contador Regressivo</strong></p>
+</div>
+<footer>Os nomes, datas e endereços são exemplos — tudo pode ser personalizado</footer>
+</body>
+</html>
