@@ -48,11 +48,12 @@
     .hero-date{font-family:'Cinzel',serif;font-size:.72rem;letter-spacing:5px;color:var(--text-dim);text-transform:uppercase}
 
     /* PHOTO */
-    .photo-oval-wrap{margin:34px auto 0;width:190px;height:250px}
-    .photo-oval{width:190px;height:250px;border-radius:95px 95px 0 0;background:linear-gradient(160deg,var(--olive-pale),rgba(122,143,90,.35));border:2px solid var(--gold);box-shadow:0 8px 40px rgba(59,74,41,.15),0 0 0 7px rgba(200,169,74,.07);display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden}
+    .photo-oval-wrap{margin:36px auto 0;width:min(320px,82vw);height:min(440px,112vw)}
+    .photo-oval{width:100%;height:100%;border-radius:8px;background:linear-gradient(160deg,var(--olive-pale),rgba(122,143,90,.35));border:3px solid var(--gold);box-shadow:0 10px 50px rgba(59,74,41,.22),0 0 0 8px rgba(200,169,74,.09);display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden}
     .photo-oval i{font-size:2.3rem;color:var(--olive);margin-bottom:10px;opacity:.5}
     .photo-oval p{font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:2px;color:var(--olive);text-transform:uppercase;opacity:.65}
     .photo-oval small{font-size:.58rem;color:var(--text-dim);margin-top:4px}
+    .foto-casal{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
 
     /* COUNTDOWN */
     .countdown-wrap{background:var(--olive);padding:38px 20px;border-top:1px solid rgba(200,169,74,.25);border-bottom:1px solid rgba(200,169,74,.25)}
@@ -205,9 +206,7 @@
 
   <div class="photo-oval-wrap">
     <div class="photo-oval">
-      <i class="fas fa-heart"></i>
-      <p>Foto do Casal</p>
-      <small>Adicione aqui</small>
+      <img src="foto-casal.jpeg" alt="Fabiana e Giancarlo" class="foto-casal">
     </div>
   </div>
 </div>
