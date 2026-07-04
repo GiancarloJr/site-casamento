@@ -296,7 +296,7 @@
     <span class="s-tag">Confirmação</span>
     <h2 class="s-title">Confirme sua Presença</h2>
     <div class="s-line"></div>
-    <p style="text-align:center;color:rgba(255,255,255,.80);font-size:1rem;font-weight:500;margin-bottom:32px;font-style:italic">Confirme até 15 de Agosto de 2026 &nbsp;·&nbsp; (64) 99999-9999</p>
+    <p style="text-align:center;color:rgba(255,255,255,.80);font-size:1rem;font-weight:500;margin-bottom:32px;font-style:italic">Confirme até 15 de Agosto de 2026 &nbsp;·&nbsp; (64) 99997-0059</p>
     <div class="rsvp-form">
       <form id="form6">
         <div class="form-row">
@@ -381,7 +381,18 @@
   }
   tick();setInterval(tick,1000);
   document.getElementById('form6').addEventListener('submit',function(e){
-    e.preventDefault();this.style.display='none';
+    e.preventDefault();
+    const inputs=this.querySelectorAll('input');
+    const selects=this.querySelectorAll('select');
+    const textarea=this.querySelector('textarea');
+    const nome=inputs[0].value;
+    const contato=inputs[1].value;
+    const confirmacao=selects[0].value;
+    const acompanhantes=selects[1].value;
+    const mensagem=textarea.value;
+    const texto=`✉️ Confirmação de Presença — Fabiana & Giancarlo\n\n👤 Nome: ${nome}\n📱 Contato: ${contato}\n✅ ${confirmacao}\n👥 Acompanhantes: ${acompanhantes}${mensagem?'\n💬 Mensagem: '+mensagem:''}`;
+    window.open('https://wa.me/5564999970059?text='+encodeURIComponent(texto),'_blank');
+    this.style.display='none';
     document.querySelector('.rsvp-ok').style.display='block';
   });
   const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('v')}),{threshold:.1});
