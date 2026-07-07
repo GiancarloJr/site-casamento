@@ -85,10 +85,11 @@
     .tl-body h3{font-family:'Cinzel',serif;font-size:1rem;color:var(--olive);margin-bottom:6px;letter-spacing:1px}
     .tl-body p{font-size:1rem;color:var(--text);line-height:1.7;font-style:italic}
     @media(max-width:600px){
-      .tl-item{grid-template-columns:50px 1fr}
+      .tl-item{grid-template-columns:50px 1fr;grid-template-rows:auto auto}
       .tl-dot-col{grid-column:1;grid-row:1}
       .tl-body{grid-column:2;grid-row:1;text-align:left}
-      .tl-empty{display:none}
+      .tl-empty{grid-column:1/-1;grid-row:2;margin-top:14px}
+      .tl-empty:empty{display:none}
     }
 
     /* LOCAIS */
