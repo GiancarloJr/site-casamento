@@ -85,11 +85,12 @@
     .tl-body h3{font-family:'Cinzel',serif;font-size:1rem;color:var(--olive);margin-bottom:6px;letter-spacing:1px}
     .tl-body p{font-size:1rem;color:var(--text);line-height:1.7;font-style:italic}
     @media(max-width:600px){
-      .tl-item{grid-template-columns:50px 1fr;grid-template-rows:auto auto}
-      .tl-dot-col{grid-column:1;grid-row:1}
-      .tl-body{grid-column:2;grid-row:1;text-align:left}
-      .tl-empty{grid-column:1/-1;grid-row:2;margin-top:14px}
+      .tl-item{display:flex;flex-direction:column;align-items:center;text-align:center;padding:24px 0}
+      .tl-dot-col{display:none}
+      .tl-body{width:100%;text-align:center}
+      .tl-empty{width:100%;margin-top:16px;text-align:center}
       .tl-empty:empty{display:none}
+      .tl-photo{max-width:100%;margin:0 auto}
     }
 
     /* LOCAIS */
