@@ -391,7 +391,7 @@
     const confirmacao=selects[0].value;
     const acompanhantes=selects[1].value;
     const mensagem=textarea.value;
-    const texto=`✉️ Confirmação de Presença — Fabiana & Giancarlo\n\n👤 Nome: ${nome}\n✅ ${confirmacao}\n👥 Acompanhantes: ${acompanhantes}${mensagem?'\n💬 Mensagem: '+mensagem:''}`;
+    const texto=`Confirmação de Presença — Fabiana & Giancarlo\n\nNome: ${nome}\n${confirmacao}\nAcompanhantes: ${acompanhantes}${mensagem?'\nMensagem: '+mensagem:''}`;
     window.open('https://wa.me/5564984161746?text='+encodeURIComponent(texto),'_blank');
     this.style.display='none';
     document.querySelector('.rsvp-ok').style.display='block';
