@@ -396,7 +396,7 @@
     this.style.display='none';
     document.querySelector('.rsvp-ok').style.display='block';
   });
-  const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('v')}),{threshold:.1});
+  const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('v')}),{threshold:0});
   document.querySelectorAll('.fi').forEach(el=>obs.observe(el));
   const ham=document.getElementById('ham'),mnav=document.getElementById('mnav');
   ham.addEventListener('click',()=>mnav.classList.toggle('on'));
